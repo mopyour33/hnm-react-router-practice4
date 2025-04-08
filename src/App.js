@@ -1,4 +1,3 @@
-//1~3까지 내가 작성한 것(시작)
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import ProductAll from './page/ProductAll';
@@ -6,6 +5,7 @@ import LoginPage from './page/LoginPage';
 import ProductDetail from './page/ProductDetail';
 import Navbar from './component/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css'
+import { useEffect, useState } from 'react';
 
 //1. 전체상품페이지, 로그인, 상품상세페이지
 //1-1. Navigation bar 만들기
@@ -19,12 +19,18 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
 
+  const [authenticate,setAuthenticate] =useState(false) //true면 로그인이 되고 false면 로그인이 안됨.
+
+  useEffect(()=>{
+    console.log("AAAA", authenticate)
+  },[authenticate])
+
   return (
     <div>
       <Navbar/>
       <Routes>
         <Route path="/" element={<ProductAll/>}/>
-        <Route path="/login" element={<LoginPage/>}/>
+        <Route path="/login" element={<LoginPage setAuthenticate={setAuthenticate}/>}/>
         <Route path="/product/:id" element={<ProductDetail/>}/>
       </Routes>
     </div>
@@ -32,10 +38,9 @@ function App() {
 }
 
 export default App;
-//1~3까지 내가 작성한 것(끝)
 
 
-
+// //1~3까지 내가 작성한 것(시작)
 // import { Routes, Route } from 'react-router-dom';
 // import './App.css';
 // import ProductAll from './page/ProductAll';
@@ -43,7 +48,6 @@ export default App;
 // import ProductDetail from './page/ProductDetail';
 // import Navbar from './component/Navbar';
 // import 'bootstrap/dist/css/bootstrap.min.css'
-// import { useEffect, useState } from 'react';
 
 // //1. 전체상품페이지, 로그인, 상품상세페이지
 // //1-1. Navigation bar 만들기
@@ -57,18 +61,12 @@ export default App;
 
 // function App() {
 
-//   const [authenticate,setAuthenticate] =useState(false) //true면 로그인이 되고 false면 로그인이 안됨.
-
-//   useEffect(()=>{
-//     console.log("AAAA", authenticate)
-//   },[authenticate])
-
 //   return (
 //     <div>
 //       <Navbar/>
 //       <Routes>
 //         <Route path="/" element={<ProductAll/>}/>
-//         <Route path="/login" element={<LoginPage setAuthenticate={setAuthenticate}/>}/>
+//         <Route path="/login" element={<LoginPage/>}/>
 //         <Route path="/product/:id" element={<ProductDetail/>}/>
 //       </Routes>
 //     </div>
@@ -76,3 +74,4 @@ export default App;
 // }
 
 // export default App;
+// //1~3까지 내가 작성한 것(끝)
