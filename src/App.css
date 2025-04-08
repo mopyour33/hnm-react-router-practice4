@@ -1,0 +1,258 @@
+.login-container{
+    margin-top: 60px;
+}
+
+.login-form-box{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group input{
+    height: 36px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.login-button{
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.nav-section{
+    display: flex;
+    justify-content: center;
+}
+
+.menu-list{
+    display: flex;
+    list-style-type: none;
+    
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 0;
+}
+
+.menu-list li {
+    padding: 5px;
+}
+
+.menu-area{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;  
+    align-items: center;
+    padding: 0 20px;
+    height: 60px;
+    
+}
+
+.search-area{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.search-box{
+    width: 200px;
+    height: 30px;
+    padding: 0 8px;
+    border: 1px solid gray;
+    border-radius: 4px;    
+}
+
+.login-content{
+    display: flex;
+    justify-content: center;
+}
+
+.product-card-box {
+  display: flex;
+  justify-content: center; /* ✅ 가운데 정렬 */
+  padding: 10px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+
+.card-inner {
+  width: 80%;                /* 이미지와 같은 너비 */
+  max-width: 240px;          /* 이미지와 동일한 max-width */
+  margin: 0 auto;            /* 가운데 정렬 */
+}
+
+.card-text {
+  text-align: left;
+}
+.card-image{
+    display: block;
+    margin: 0 auto;
+    width: 100%;    
+    height: auto;
+    max-width: 300px;
+    transition: transform 0.3s ease-in-out; /*부드럽게 전환 */
+}
+
+.card-image:hover{
+    transform: scale(1.1);
+}
+
+.id-pw-input-box{
+    display: flex;
+    justify-content: center;
+}
+
+.button-style {
+    display: flex;
+    justify-content: center;
+    width: 100%; /* 기준 입력창 대비 1/4 크기 */
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .button-style:hover {
+    background-color: #0056b3;
+  }
+
+  .col-style{
+    display: flex;
+    justify-content: center;
+  }
+
+  .product-all-content{
+    padding-top: 10px;
+  }
+
+  /* 👇 모바일 반응형 추가 (768px 이하) */
+@media screen and (max-width: 768px) {
+
+    .card-image {
+      width: 100%;
+      max-width: 240px;
+      margin: 0 auto;
+      padding-left: 0;
+    }
+
+    .product-card-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  
+    .card-inner {
+      width: 90%;
+      max-width: 240px;
+      margin: 0 auto;
+    }
+  
+    .card-text {
+      text-align: left;
+    }
+
+    .card-image:hover{
+        transform: scale(1.1);
+    }
+
+    .login-container {
+      margin-top: 80px;
+      padding: 0 16px;
+    }
+  
+    .login-form-box {
+      gap: 16px;
+    }
+  
+    .form-group input {
+      width: 100%;
+      font-size: 16px;
+    }
+  
+    .button-style {
+      width: 100%;
+      font-size: 16px;
+      margin-top: 16px;
+    }
+  
+    .col-style {
+      justify-content: center;
+    }
+  
+    .login-button {
+      justify-content: flex-end;
+      margin: 10px 0;
+    }
+
+    .nav-section {
+      display: block;
+      width: 100%;
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      clear: both; /*  이전 float 요소 무효화 */
+    }
+  
+    .menu-area {
+      display: block;
+      width: 100%;
+      text-align: center;
+      margin: 10px 0;
+      clear: both;  /*  줄 분리 강제 */
+    }
+  
+    .menu-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 10px;
+      position: static !important;    /* ✅ absolute 완전 제거 */
+      transform: none !important;     /* ✅ translate 제거 */
+    }
+  
+    .menu-list li {
+      padding: 6px 10px;
+      font-size: 14px;
+    }
+  
+    .search-area {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-top: 8px;
+    }
+  
+    .search-box {
+      width: 90%;
+      max-width: 300px;
+    }
+
+  .product-all-content{
+    margin-top: 60px;
+  }
+}
